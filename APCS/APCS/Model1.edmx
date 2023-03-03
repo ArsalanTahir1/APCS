@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="APCSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'APCS.dbo.pictures' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="pictures">
+          <Key>
+            <PropertyRef Name="p_id" />
+          </Key>
+          <Property Name="p_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="p_picture" Type="image" />
+        </EntityType>
+        <EntityType Name="station">
+          <Key>
+            <PropertyRef Name="s_id" />
+          </Key>
+          <Property Name="s_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="s_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="s_longitude" Type="nvarchar" MaxLength="50" />
+          <Property Name="s_latitude" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tow">
+          <Key>
+            <PropertyRef Name="t_id" />
+          </Key>
+          <Property Name="t_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="station" Type="int" Nullable="false" />
+          <Property Name="user_number" Type="int" Nullable="false" />
+          <Property Name="vehicle_number" Type="int" Nullable="false" />
+          <Property Name="t_date_time" Type="date" />
+          <Property Name="t_location" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="user_role">
+          <Key>
+            <PropertyRef Name="r_id" />
+          </Key>
+          <Property Name="r_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="r_type" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="u_id" />
+          </Key>
+          <Property Name="u_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="u_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="u_address" Type="nvarchar" MaxLength="50" />
+          <Property Name="u_contact" Type="nvarchar" MaxLength="50" />
+          <Property Name="role" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="vehicle">
+          <Key>
+            <PropertyRef Name="v_id" />
+          </Key>
+          <Property Name="v_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="v_num_plate" Type="nvarchar" MaxLength="50" />
+          <Property Name="v_type" Type="nvarchar" MaxLength="50" />
+          <Property Name="v_color" Type="nvarchar" MaxLength="50" />
+          <Property Name="v_model" Type="nvarchar" MaxLength="50" />
+          <Property Name="v_picture" Type="image" />
+          <Property Name="v_brand" Type="nvarchar" MaxLength="50" />
+          <Property Name="v_chassis" Type="nvarchar" MaxLength="50" />
+          <Property Name="v_generation" Type="nvarchar" MaxLength="50" />
+          <Property Name="v_engine" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="vehicle_own">
+          <Key>
+            <PropertyRef Name="w_id" />
+          </Key>
+          <Property Name="w_active" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="w_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="user_num" Type="int" Nullable="false" />
+          <Property Name="vehicle_num" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_tow_station">
+          <End Role="station" Type="Self.station" Multiplicity="1" />
+          <End Role="tow" Type="Self.tow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="station">
+              <PropertyRef Name="s_id" />
+            </Principal>
+            <Dependent Role="tow">
+              <PropertyRef Name="station" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tow_users">
+          <End Role="users" Type="Self.users" Multiplicity="1" />
+          <End Role="tow" Type="Self.tow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="u_id" />
+            </Principal>
+            <Dependent Role="tow">
+              <PropertyRef Name="user_number" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tow_vehicle">
+          <End Role="vehicle" Type="Self.vehicle" Multiplicity="1" />
+          <End Role="tow" Type="Self.tow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vehicle">
+              <PropertyRef Name="v_id" />
+            </Principal>
+            <Dependent Role="tow">
+              <PropertyRef Name="vehicle_number" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_users_user_role">
+          <End Role="user_role" Type="Self.user_role" Multiplicity="1" />
+          <End Role="users" Type="Self.users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user_role">
+              <PropertyRef Name="r_id" />
+            </Principal>
+            <Dependent Role="users">
+              <PropertyRef Name="role" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_vehicle_own_users">
+          <End Role="users" Type="Self.users" Multiplicity="1" />
+          <End Role="vehicle_own" Type="Self.vehicle_own" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="u_id" />
+            </Principal>
+            <Dependent Role="vehicle_own">
+              <PropertyRef Name="user_num" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_vehicle_own_vehicle">
+          <End Role="vehicle" Type="Self.vehicle" Multiplicity="1" />
+          <End Role="vehicle_own" Type="Self.vehicle_own" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vehicle">
+              <PropertyRef Name="v_id" />
+            </Principal>
+            <Dependent Role="vehicle_own">
+              <PropertyRef Name="vehicle_num" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="APCSModelStoreContainer">
+          <EntitySet Name="station" EntityType="Self.station" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tow" EntityType="Self.tow" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="user_role" EntityType="Self.user_role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vehicle" EntityType="Self.vehicle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vehicle_own" EntityType="Self.vehicle_own" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="pictures" EntityType="Self.pictures" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [pictures].[p_id] AS [p_id], 
+    [pictures].[p_picture] AS [p_picture]
+    FROM [dbo].[pictures] AS [pictures]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_tow_station" Association="Self.FK_tow_station">
+            <End Role="station" EntitySet="station" />
+            <End Role="tow" EntitySet="tow" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tow_users" Association="Self.FK_tow_users">
+            <End Role="users" EntitySet="users" />
+            <End Role="tow" EntitySet="tow" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tow_vehicle" Association="Self.FK_tow_vehicle">
+            <End Role="vehicle" EntitySet="vehicle" />
+            <End Role="tow" EntitySet="tow" />
+          </AssociationSet>
+          <AssociationSet Name="FK_users_user_role" Association="Self.FK_users_user_role">
+            <End Role="user_role" EntitySet="user_role" />
+            <End Role="users" EntitySet="users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_vehicle_own_users" Association="Self.FK_vehicle_own_users">
+            <End Role="users" EntitySet="users" />
+            <End Role="vehicle_own" EntitySet="vehicle_own" />
+          </AssociationSet>
+          <AssociationSet Name="FK_vehicle_own_vehicle" Association="Self.FK_vehicle_own_vehicle">
+            <End Role="vehicle" EntitySet="vehicle" />
+            <End Role="vehicle_own" EntitySet="vehicle_own" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="APCSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="station">
+          <Key>
+            <PropertyRef Name="s_id" />
+          </Key>
+          <Property Name="s_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="s_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="s_longitude" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="s_latitude" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tows" Relationship="Self.FK_tow_station" FromRole="station" ToRole="tow" />
+        </EntityType>
+        <EntityType Name="tow">
+          <Key>
+            <PropertyRef Name="t_id" />
+          </Key>
+          <Property Name="t_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="station" Type="Int32" Nullable="false" />
+          <Property Name="user_number" Type="Int32" Nullable="false" />
+          <Property Name="vehicle_number" Type="Int32" Nullable="false" />
+          <Property Name="t_date_time" Type="DateTime" Precision="0" />
+          <Property Name="t_location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="station1" Relationship="Self.FK_tow_station" FromRole="tow" ToRole="station" />
+          <NavigationProperty Name="user" Relationship="Self.FK_tow_users" FromRole="tow" ToRole="users" />
+          <NavigationProperty Name="vehicle" Relationship="Self.FK_tow_vehicle" FromRole="tow" ToRole="vehicle" />
+        </EntityType>
+        <EntityType Name="user_role">
+          <Key>
+            <PropertyRef Name="r_id" />
+          </Key>
+          <Property Name="r_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="r_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="users" Relationship="Self.FK_users_user_role" FromRole="user_role" ToRole="users" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="u_id" />
+          </Key>
+          <Property Name="u_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="u_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="u_address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="u_contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="role" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tows" Relationship="Self.FK_tow_users" FromRole="users" ToRole="tow" />
+          <NavigationProperty Name="user_role" Relationship="Self.FK_users_user_role" FromRole="users" ToRole="user_role" />
+          <NavigationProperty Name="vehicle_own" Relationship="Self.FK_vehicle_own_users" FromRole="users" ToRole="vehicle_own" />
+        </EntityType>
+        <EntityType Name="vehicle">
+          <Key>
+            <PropertyRef Name="v_id" />
+          </Key>
+          <Property Name="v_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="v_num_plate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="v_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="v_color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="v_model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="v_picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="v_brand" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="v_chassis" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="v_generation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="v_engine" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tows" Relationship="Self.FK_tow_vehicle" FromRole="vehicle" ToRole="tow" />
+          <NavigationProperty Name="vehicle_own" Relationship="Self.FK_vehicle_own_vehicle" FromRole="vehicle" ToRole="vehicle_own" />
+        </EntityType>
+        <EntityType Name="vehicle_own">
+          <Key>
+            <PropertyRef Name="w_id" />
+          </Key>
+          <Property Name="w_active" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="w_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_num" Type="Int32" Nullable="false" />
+          <Property Name="vehicle_num" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="user" Relationship="Self.FK_vehicle_own_users" FromRole="vehicle_own" ToRole="users" />
+          <NavigationProperty Name="vehicle" Relationship="Self.FK_vehicle_own_vehicle" FromRole="vehicle_own" ToRole="vehicle" />
+        </EntityType>
+        <Association Name="FK_tow_station">
+          <End Role="station" Type="Self.station" Multiplicity="1" />
+          <End Role="tow" Type="Self.tow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="station">
+              <PropertyRef Name="s_id" />
+            </Principal>
+            <Dependent Role="tow">
+              <PropertyRef Name="station" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tow_users">
+          <End Role="users" Type="Self.user" Multiplicity="1" />
+          <End Role="tow" Type="Self.tow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="u_id" />
+            </Principal>
+            <Dependent Role="tow">
+              <PropertyRef Name="user_number" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tow_vehicle">
+          <End Role="vehicle" Type="Self.vehicle" Multiplicity="1" />
+          <End Role="tow" Type="Self.tow" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vehicle">
+              <PropertyRef Name="v_id" />
+            </Principal>
+            <Dependent Role="tow">
+              <PropertyRef Name="vehicle_number" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_users_user_role">
+          <End Role="user_role" Type="Self.user_role" Multiplicity="1" />
+          <End Role="users" Type="Self.user" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user_role">
+              <PropertyRef Name="r_id" />
+            </Principal>
+            <Dependent Role="users">
+              <PropertyRef Name="role" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_vehicle_own_users">
+          <End Role="users" Type="Self.user" Multiplicity="1" />
+          <End Role="vehicle_own" Type="Self.vehicle_own" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="u_id" />
+            </Principal>
+            <Dependent Role="vehicle_own">
+              <PropertyRef Name="user_num" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_vehicle_own_vehicle">
+          <End Role="vehicle" Type="Self.vehicle" Multiplicity="1" />
+          <End Role="vehicle_own" Type="Self.vehicle_own" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="vehicle">
+              <PropertyRef Name="v_id" />
+            </Principal>
+            <Dependent Role="vehicle_own">
+              <PropertyRef Name="vehicle_num" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="APCSEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="stations" EntityType="Self.station" />
+          <EntitySet Name="tows" EntityType="Self.tow" />
+          <EntitySet Name="user_role" EntityType="Self.user_role" />
+          <EntitySet Name="users" EntityType="Self.user" />
+          <EntitySet Name="vehicles" EntityType="Self.vehicle" />
+          <EntitySet Name="vehicle_own" EntityType="Self.vehicle_own" />
+          <AssociationSet Name="FK_tow_station" Association="Self.FK_tow_station">
+            <End Role="station" EntitySet="stations" />
+            <End Role="tow" EntitySet="tows" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tow_users" Association="Self.FK_tow_users">
+            <End Role="users" EntitySet="users" />
+            <End Role="tow" EntitySet="tows" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tow_vehicle" Association="Self.FK_tow_vehicle">
+            <End Role="vehicle" EntitySet="vehicles" />
+            <End Role="tow" EntitySet="tows" />
+          </AssociationSet>
+          <AssociationSet Name="FK_users_user_role" Association="Self.FK_users_user_role">
+            <End Role="user_role" EntitySet="user_role" />
+            <End Role="users" EntitySet="users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_vehicle_own_users" Association="Self.FK_vehicle_own_users">
+            <End Role="users" EntitySet="users" />
+            <End Role="vehicle_own" EntitySet="vehicle_own" />
+          </AssociationSet>
+          <AssociationSet Name="FK_vehicle_own_vehicle" Association="Self.FK_vehicle_own_vehicle">
+            <End Role="vehicle" EntitySet="vehicles" />
+            <End Role="vehicle_own" EntitySet="vehicle_own" />
+          </AssociationSet>
+          <EntitySet Name="pictures" EntityType="APCSModel.picture" />
+        </EntityContainer>
+        <EntityType Name="picture">
+          <Key>
+            <PropertyRef Name="p_id" />
+          </Key>
+          <Property Name="p_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="p_picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="APCSModelStoreContainer" CdmEntityContainer="APCSEntities">
+          <EntitySetMapping Name="stations">
+            <EntityTypeMapping TypeName="APCSModel.station">
+              <MappingFragment StoreEntitySet="station">
+                <ScalarProperty Name="s_id" ColumnName="s_id" />
+                <ScalarProperty Name="s_name" ColumnName="s_name" />
+                <ScalarProperty Name="s_longitude" ColumnName="s_longitude" />
+                <ScalarProperty Name="s_latitude" ColumnName="s_latitude" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tows">
+            <EntityTypeMapping TypeName="APCSModel.tow">
+              <MappingFragment StoreEntitySet="tow">
+                <ScalarProperty Name="t_id" ColumnName="t_id" />
+                <ScalarProperty Name="station" ColumnName="station" />
+                <ScalarProperty Name="user_number" ColumnName="user_number" />
+                <ScalarProperty Name="vehicle_number" ColumnName="vehicle_number" />
+                <ScalarProperty Name="t_date_time" ColumnName="t_date_time" />
+                <ScalarProperty Name="t_location" ColumnName="t_location" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user_role">
+            <EntityTypeMapping TypeName="APCSModel.user_role">
+              <MappingFragment StoreEntitySet="user_role">
+                <ScalarProperty Name="r_id" ColumnName="r_id" />
+                <ScalarProperty Name="r_type" ColumnName="r_type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="APCSModel.user">
+              <MappingFragment StoreEntitySet="users">
+                <ScalarProperty Name="u_id" ColumnName="u_id" />
+                <ScalarProperty Name="u_name" ColumnName="u_name" />
+                <ScalarProperty Name="u_address" ColumnName="u_address" />
+                <ScalarProperty Name="u_contact" ColumnName="u_contact" />
+                <ScalarProperty Name="role" ColumnName="role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vehicles">
+            <EntityTypeMapping TypeName="APCSModel.vehicle">
+              <MappingFragment StoreEntitySet="vehicle">
+                <ScalarProperty Name="v_id" ColumnName="v_id" />
+                <ScalarProperty Name="v_num_plate" ColumnName="v_num_plate" />
+                <ScalarProperty Name="v_type" ColumnName="v_type" />
+                <ScalarProperty Name="v_color" ColumnName="v_color" />
+                <ScalarProperty Name="v_model" ColumnName="v_model" />
+                <ScalarProperty Name="v_picture" ColumnName="v_picture" />
+                <ScalarProperty Name="v_brand" ColumnName="v_brand" />
+                <ScalarProperty Name="v_chassis" ColumnName="v_chassis" />
+                <ScalarProperty Name="v_generation" ColumnName="v_generation" />
+                <ScalarProperty Name="v_engine" ColumnName="v_engine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vehicle_own">
+            <EntityTypeMapping TypeName="APCSModel.vehicle_own">
+              <MappingFragment StoreEntitySet="vehicle_own">
+                <ScalarProperty Name="w_active" ColumnName="w_active" />
+                <ScalarProperty Name="w_id" ColumnName="w_id" />
+                <ScalarProperty Name="user_num" ColumnName="user_num" />
+                <ScalarProperty Name="vehicle_num" ColumnName="vehicle_num" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pictures">
+            <EntityTypeMapping TypeName="APCSModel.picture">
+              <MappingFragment StoreEntitySet="pictures">
+                <ScalarProperty Name="p_picture" ColumnName="p_picture" />
+                <ScalarProperty Name="p_id" ColumnName="p_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

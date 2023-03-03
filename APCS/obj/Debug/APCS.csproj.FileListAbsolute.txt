@@ -1,0 +1,96 @@
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\APCS\APCS\bin\Debug\APCS.exe.config
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\APCS\APCS\obj\Debug\APCS.exe
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\APCS\APCS\obj\Debug\APCS.pdb
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\APCS\APCS\bin\Debug\APCS.exe
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\APCS\APCS\bin\Debug\APCS.pdb
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\APCS\APCS\obj\Debug\APCS.csprojResolveAssemblyReference.cache
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\APCS\APCS\obj\Debug\APCS.Form1.resources
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\APCS\APCS\obj\Debug\APCS.Main.resources
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\APCS\APCS\obj\Debug\APCS.Properties.Resources.resources
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\APCS\APCS\obj\Debug\APCS.csproj.GenerateResource.Cache
+C:\Users\Husnain Abbas\documents\visual studio 2013\Projects\APCS\APCS\bin\Debug\EntityFramework.dll
+C:\Users\Husnain Abbas\documents\visual studio 2013\Projects\APCS\APCS\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Husnain Abbas\documents\visual studio 2013\Projects\APCS\APCS\bin\Debug\EntityFramework.xml
+C:\Users\Husnain Abbas\documents\visual studio 2013\Projects\APCS\APCS\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\7-sep-backup\New folder\APCS\APCS\bin\Debug\APCS.exe.config
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\7-sep-backup\New folder\APCS\APCS\obj\Debug\APCS.exe
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\7-sep-backup\New folder\APCS\APCS\obj\Debug\APCS.pdb
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\7-sep-backup\New folder\APCS\APCS\bin\Debug\APCS.exe
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\7-sep-backup\New folder\APCS\APCS\bin\Debug\APCS.pdb
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\7-sep-backup\New folder\APCS\APCS\bin\Debug\EntityFramework.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\7-sep-backup\New folder\APCS\APCS\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\7-sep-backup\New folder\APCS\APCS\bin\Debug\EntityFramework.xml
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\7-sep-backup\New folder\APCS\APCS\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\7-sep-backup\New folder\APCS\APCS\obj\Debug\APCS.csprojResolveAssemblyReference.cache
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\7-sep-backup\New folder\APCS\APCS\obj\Debug\APCS.Form1.resources
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\7-sep-backup\New folder\APCS\APCS\obj\Debug\APCS.Main.resources
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\7-sep-backup\New folder\APCS\APCS\obj\Debug\APCS.Properties.Resources.resources
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\7-sep-backup\New folder\APCS\APCS\obj\Debug\APCS.csproj.GenerateResource.Cache
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\APCS.exe.config
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\obj\Debug\APCS.exe
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\obj\Debug\APCS.pdb
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\obj\Debug\APCS.Form1.resources
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\obj\Debug\APCS.Main.resources
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\obj\Debug\APCS.Properties.Resources.resources
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\obj\Debug\APCS.csproj.GenerateResource.Cache
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\APCS.exe
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\APCS.pdb
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\EntityFramework.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\EntityFramework.xml
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\obj\Debug\APCS.main1.resources
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\Emgu.CV.UI.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\Emgu.CV.UI.GL.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\Emgu.CV.World.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\OpenTK.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\OpenTK.GLControl.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\ZedGraph.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\Emgu.CV.UI.xml
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\Emgu.CV.UI.GL.xml
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\Emgu.CV.World.xml
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\OpenTK.xml
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\OpenTK.GLControl.xml
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\ZedGraph.xml
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\de\ZedGraph.resources.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\es\ZedGraph.resources.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\fr\ZedGraph.resources.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\hu\ZedGraph.resources.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\it\ZedGraph.resources.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\ja\ZedGraph.resources.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\pt\ZedGraph.resources.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\ru\ZedGraph.resources.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\sk\ZedGraph.resources.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\sv\ZedGraph.resources.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\tr\ZedGraph.resources.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\zh-cn\ZedGraph.resources.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\zh-tw\ZedGraph.resources.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\IronOcr.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\IronOcr.xml
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\Coding4Fun.Kinect.WinForm.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\Microsoft.Expression.Encoder.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\WebcamControl.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\obj\Debug\APCS.imageshow.resources
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\picture.jpg
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\Resources\picture.jpg
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\JWT.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\Twilio.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\Twilio.xml
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\obj\Debug\APCS.csprojResolveAssemblyReference.cache
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\x64\liblept172.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\x64\libtesseract304.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\x86\liblept172.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\x86\libtesseract304.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\tessdata\eng.cube.bigrams
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\tessdata\eng.cube.fold
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\tessdata\eng.cube.lm
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\tessdata\eng.cube.nn
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\tessdata\eng.cube.params
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\tessdata\eng.cube.size
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\tessdata\eng.cube.word-freq
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\tessdata\eng.tesseract_cube.nn
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\tessdata\eng.traineddata
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\Tesseract.dll
+C:\Users\Husnain Abbas\Documents\Visual Studio 2013\Projects\New folder (2)\APCS\APCS\bin\Debug\Tesseract.xml

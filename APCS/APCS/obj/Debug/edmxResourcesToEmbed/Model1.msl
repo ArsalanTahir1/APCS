@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="APCSModelStoreContainer" CdmEntityContainer="APCSEntities">
+    <EntitySetMapping Name="stations">
+      <EntityTypeMapping TypeName="APCSModel.station">
+        <MappingFragment StoreEntitySet="station">
+          <ScalarProperty Name="s_id" ColumnName="s_id" />
+          <ScalarProperty Name="s_name" ColumnName="s_name" />
+          <ScalarProperty Name="s_longitude" ColumnName="s_longitude" />
+          <ScalarProperty Name="s_latitude" ColumnName="s_latitude" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tows">
+      <EntityTypeMapping TypeName="APCSModel.tow">
+        <MappingFragment StoreEntitySet="tow">
+          <ScalarProperty Name="t_id" ColumnName="t_id" />
+          <ScalarProperty Name="station" ColumnName="station" />
+          <ScalarProperty Name="user_number" ColumnName="user_number" />
+          <ScalarProperty Name="vehicle_number" ColumnName="vehicle_number" />
+          <ScalarProperty Name="t_date_time" ColumnName="t_date_time" />
+          <ScalarProperty Name="t_location" ColumnName="t_location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_role">
+      <EntityTypeMapping TypeName="APCSModel.user_role">
+        <MappingFragment StoreEntitySet="user_role">
+          <ScalarProperty Name="r_id" ColumnName="r_id" />
+          <ScalarProperty Name="r_type" ColumnName="r_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="APCSModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="u_id" ColumnName="u_id" />
+          <ScalarProperty Name="u_name" ColumnName="u_name" />
+          <ScalarProperty Name="u_address" ColumnName="u_address" />
+          <ScalarProperty Name="u_contact" ColumnName="u_contact" />
+          <ScalarProperty Name="role" ColumnName="role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vehicles">
+      <EntityTypeMapping TypeName="APCSModel.vehicle">
+        <MappingFragment StoreEntitySet="vehicle">
+          <ScalarProperty Name="v_id" ColumnName="v_id" />
+          <ScalarProperty Name="v_num_plate" ColumnName="v_num_plate" />
+          <ScalarProperty Name="v_type" ColumnName="v_type" />
+          <ScalarProperty Name="v_color" ColumnName="v_color" />
+          <ScalarProperty Name="v_model" ColumnName="v_model" />
+          <ScalarProperty Name="v_picture" ColumnName="v_picture" />
+          <ScalarProperty Name="v_brand" ColumnName="v_brand" />
+          <ScalarProperty Name="v_chassis" ColumnName="v_chassis" />
+          <ScalarProperty Name="v_generation" ColumnName="v_generation" />
+          <ScalarProperty Name="v_engine" ColumnName="v_engine" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vehicle_own">
+      <EntityTypeMapping TypeName="APCSModel.vehicle_own">
+        <MappingFragment StoreEntitySet="vehicle_own">
+          <ScalarProperty Name="w_active" ColumnName="w_active" />
+          <ScalarProperty Name="w_id" ColumnName="w_id" />
+          <ScalarProperty Name="user_num" ColumnName="user_num" />
+          <ScalarProperty Name="vehicle_num" ColumnName="vehicle_num" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pictures">
+      <EntityTypeMapping TypeName="APCSModel.picture">
+        <MappingFragment StoreEntitySet="pictures">
+          <ScalarProperty Name="p_picture" ColumnName="p_picture" />
+          <ScalarProperty Name="p_id" ColumnName="p_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

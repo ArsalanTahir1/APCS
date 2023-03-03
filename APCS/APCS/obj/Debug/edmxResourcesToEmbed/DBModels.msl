@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="APCSModelStoreContainer" CdmEntityContainer="APCSEntities">
+    <EntitySetMapping Name="vehicle_own">
+      <EntityTypeMapping TypeName="APCSModel.vehicle_own">
+        <MappingFragment StoreEntitySet="vehicle_own">
+          <ScalarProperty Name="w_active" ColumnName="w_active" />
+          <ScalarProperty Name="v_id" ColumnName="v_id" />
+          <ScalarProperty Name="u_id" ColumnName="u_id" />
+          <ScalarProperty Name="w_id" ColumnName="w_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

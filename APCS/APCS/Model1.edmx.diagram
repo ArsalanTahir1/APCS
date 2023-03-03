@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="059ad3be468742f5825f0f5f4c547cfb" Name="Diagram1" ZoomLevel="47">
+        <EntityTypeShape EntityType="APCSModel.station" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="APCSModel.tow" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="APCSModel.user_role" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="APCSModel.user" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="APCSModel.vehicle" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="APCSModel.vehicle_own" Width="1.5" PointX="8.25" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="APCSModel.FK_tow_station" ManuallyRouted="false" />
+        <AssociationConnector Association="APCSModel.FK_tow_users" ManuallyRouted="false" />
+        <AssociationConnector Association="APCSModel.FK_tow_vehicle" ManuallyRouted="false" />
+        <AssociationConnector Association="APCSModel.FK_users_user_role" ManuallyRouted="false" />
+        <AssociationConnector Association="APCSModel.FK_vehicle_own_users" ManuallyRouted="false" />
+        <AssociationConnector Association="APCSModel.FK_vehicle_own_vehicle" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="APCSModel.picture" Width="1.5" PointX="5.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
